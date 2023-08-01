@@ -120,6 +120,10 @@
       margin-bottom: 1rem;
     }
 
+    &:active::before {
+      background-color: var(--color-primary-light);
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -132,14 +136,10 @@
       transition: transform 0.3s, width 0.4s 0.3s;
     }
 
-    &:hover::before,
-    &--active::before {
+    &--active::before,
+    &:hover::before {
       transform: scaleY(1);
       width: 100%;
-    }
-
-    &:active::before {
-        background-color: var(--color-primary-light);
     }
   }
 
@@ -169,4 +169,15 @@
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light-1);
+}
+////////////////////
+/// Gallery   
+.gallery {
+  display: flex;
+  
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+
 }
