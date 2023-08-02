@@ -14,6 +14,12 @@
   align-items: center;
   justify-content: center;
 
+  @media (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
+
   &__icon {
     width: 2rem;
     height: 2rem;
@@ -118,6 +124,10 @@
 
     &:not(:last-child) {
       margin-bottom: 1rem;
+
+      @media (max-width: $bp-medium) {
+        margin-bottom: 0;
+      }
     }
 
     &:active::before {
@@ -141,6 +151,11 @@
       transform: scaleY(1);
       width: 100%;
     }
+
+    @media (max-width: $bp-medium) {
+      flex: 1;
+      margin-bottom: 0;
+    }
   }
 
   &__link {
@@ -152,6 +167,15 @@
     display: flex;
     align-items: center;
     z-index: 10;
+
+    @media (max-width: $bp-medium) {
+      justify-content: center;
+    }
+
+    @media (max-width: $bp-small) {
+      flex-direction: column;
+      padding: 1.5rem 0.5rem;
+    }
   }
 
   &__icon {
@@ -160,6 +184,18 @@
     fill: currentColor;
     margin-right: 2rem;
     z-index: 10;
+
+    @media (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: 0.7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  @media (max-width: $bp-medium) {
+    display: flex;
+    margin: 0;
   }
 }
 //////////////////
@@ -169,6 +205,10 @@
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light-1);
+
+  @media (max-width: $bp-medium) {
+    display: none;
+  }
 }
 ////////////////////
 /// Gallery
@@ -194,6 +234,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars {
@@ -206,6 +251,12 @@
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-primary);
+
+
+    @media (max-width: $bp-small) {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
   }
 
   &__location {
@@ -232,11 +283,23 @@
     &-average {
       font-size: 2.25rem;
       font-weight: 300;
+
+      @media (max-width: $bp-small) {
+        font-size: 1.8rem;
+      }
     }
 
     &-count {
       font-size: 0.8rem;
       text-transform: uppercase;
+
+      @media (max-width: $bp-small) {
+        font-size: 0.5rem;
+      }
+    }
+
+    @media (max-width: $bp-small) {
+      padding: 0 1.5rem;
     }
   }
 }
@@ -331,6 +394,10 @@
       mask-size: cover;
       -webkit-mask-size: cover;
     }
+
+    @media (max-width: $bp-small) {
+      flex: 0 0 100%;
+    }
   }
 }
 
@@ -342,6 +409,10 @@
   font-size: 1.3rem;
   justify-content: space-between;
   align-items: center;
+
+  &__friends {
+    display: flex;
+  }
 
   &__photo {
     width: 4rem;
@@ -412,6 +483,10 @@
     color: var(--color-grey-light-2);
     line-height: 1;
     z-index: 1;
+  }
+
+  @media (max-width: $bp-medium) {
+    margin-bottom: 3rem;
   }
 }
 

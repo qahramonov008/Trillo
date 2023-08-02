@@ -32,6 +32,10 @@
 }
 
 $bp-largest: 75em;
+$bp-large: 68.75em;
+$bp-medium: 56.25em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
 
 *,
 *::before,
@@ -43,6 +47,10 @@ $bp-largest: 75em;
 
 html {
   font-size: 62.5%;
+
+  @media (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 body {
