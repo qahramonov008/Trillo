@@ -3,6 +3,10 @@
   max-width: 120rem;
   margin: 8rem auto;
   box-shadow: var(--shadow-dark);
+
+  @media (max-width: $bp-largest) {
+    margin: 0;
+  }
 }
 
 .header {
